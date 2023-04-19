@@ -4,12 +4,13 @@ import Transaction from "./Transaction";
 
 function Transactions() {
   const [transactions, setTransactions] = useState([]);
-  const total = 1550;
+  let total = 0;
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/transactions`).then((res) => {
       setTransactions(res.data);
     })}, []);
 
+    transactions.map(e => e.amount).map(e2 => total += e2)
   return (
     <div >
       <section>
@@ -18,8 +19,8 @@ function Transactions() {
             <tr>
              
              
-              <th>Bank Account Total: $</th>
-              <th>{total}</th>
+              <th>Bank Account Total: ${total}</th>
+              {/* <th>{total}</th> */}
             </tr>
           </thead>
           <tbody>

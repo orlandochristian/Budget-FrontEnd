@@ -19,9 +19,7 @@ function TransactionEdit() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-//   const handleCheckboxChange = () => {
-//     setBook({ ...bookmark, isFavorite: !bookmark.isFavorite });
-//   };
+
 
   useEffect(() => {
     axios

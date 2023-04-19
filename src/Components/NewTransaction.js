@@ -49,7 +49,7 @@ function NewTransaction() {
         <label htmlFor="amount"><strong>Amount:</strong></label>
         <input
           id="amount"
-          type="number"
+          type="text"
           required
           value={transaction.amount}
           onChange={handleTextChange}
@@ -59,7 +59,7 @@ function NewTransaction() {
         <input
           id="date"
           name="date"
-          type="number"
+          type="text"
           value={transaction.date}
           onChange={handleTextChange}
         />

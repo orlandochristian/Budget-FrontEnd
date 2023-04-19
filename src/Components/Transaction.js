@@ -16,7 +16,7 @@ function Transaction({ trans }) {
       </td>
          
       <td>
-      <Link to={`/transactions/${trans.transctionId.toString()}`}>{trans.item_name}</Link>
+      <Link to={`/transactions/${trans.transctionId}`}>{trans.item_name}</Link>
          
       </td>
       <td>
